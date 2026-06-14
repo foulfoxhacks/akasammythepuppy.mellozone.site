@@ -24,6 +24,8 @@ Open `index.html` and replace or adjust the profile details:
 - Instagram/X/Facebook URLs
 - GitHub URL
 - Beacons and Linktree URLs
+- Discord presence user ID if you want to replace the custom card with a live Lanyard widget
+- Spotify artist, album, or playlist embed URL for the music card
 - Email/contact link
 
 Open `style.css` to customize:

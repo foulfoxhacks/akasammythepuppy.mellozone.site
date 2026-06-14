@@ -335,6 +335,7 @@ h3 {
 }
 
 .projects-card,
+.feature-pair,
 .stream-card {
   grid-column: 1 / -1;
 }
@@ -364,6 +365,235 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.85rem;
+}
+
+.feature-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.presence-card,
+.music-card {
+  display: grid;
+  align-content: center;
+  min-height: 25rem;
+}
+
+.presence-card {
+  background:
+    radial-gradient(circle at 24% 30%, rgba(63, 242, 255, 0.1), transparent 13rem),
+    linear-gradient(180deg, rgba(8, 14, 34, 0.96), rgba(5, 10, 26, 0.96));
+}
+
+.presence-widget {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1.35rem;
+  border: 1px solid rgba(63, 242, 255, 0.22);
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(12, 202, 201, 0.82), rgba(0, 134, 167, 0.74)),
+    radial-gradient(circle at 92% 10%, rgba(255, 105, 199, 0.35), transparent 7rem);
+  color: #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28), 0 0 32px rgba(63, 242, 255, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.presence-widget:hover,
+.presence-widget:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.32), 0 0 34px rgba(63, 242, 255, 0.24);
+}
+
+.presence-top,
+.activity-row,
+.music-hero,
+.music-controls,
+.track-list li {
+  display: flex;
+  align-items: center;
+}
+
+.presence-top {
+  gap: 0.85rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.presence-top img,
+.music-hero img {
+  width: 4rem;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.presence-top strong,
+.activity-row strong,
+.music-hero strong {
+  display: block;
+  font-size: 1.05rem;
+  line-height: 1.1;
+}
+
+.presence-top span,
+.activity-row span,
+.music-hero span {
+  display: block;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+}
+
+.status-dot {
+  width: 1rem;
+  aspect-ratio: 1;
+  margin-left: auto;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+  background: #55ff8c;
+  box-shadow: 0 0 18px rgba(85, 255, 140, 0.62);
+}
+
+.activity-row {
+  gap: 1rem;
+}
+
+.activity-icon {
+  width: 4.8rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 3px solid #061222;
+  border-radius: 16px;
+  background: #f6f4ff;
+  color: #061222;
+  font-weight: 950;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+.music-card {
+  background:
+    radial-gradient(circle at 75% 12%, rgba(255, 105, 199, 0.14), transparent 13rem),
+    linear-gradient(180deg, rgba(8, 14, 34, 0.96), rgba(5, 10, 26, 0.96));
+}
+
+.music-player {
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(164, 109, 255, 0.28);
+  border-radius: 24px;
+  background: #2326b7;
+  color: #ffffff;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3), 0 0 34px rgba(164, 109, 255, 0.18);
+}
+
+.music-hero {
+  position: relative;
+  gap: 1.1rem;
+  padding: 1.4rem;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(63, 242, 255, 0.18), transparent 9rem),
+    linear-gradient(135deg, #3146e7, #2224b5);
+}
+
+.music-hero img {
+  width: 6.25rem;
+}
+
+.music-hero strong {
+  font-size: clamp(1.45rem, 4vw, 2rem);
+}
+
+.music-hero a {
+  display: inline-flex;
+  margin-top: 0.55rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.spotify-mark {
+  position: absolute;
+  right: 1.2rem;
+  top: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2330c8;
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+.music-controls {
+  gap: 0.8rem;
+  padding: 1rem 1.4rem;
+  background: #2730d1;
+}
+
+.music-controls span {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-left: 0.35rem solid #ffffff;
+  border-top: 0.35rem solid transparent;
+  border-bottom: 0.35rem solid transparent;
+}
+
+.music-controls div {
+  height: 0.38rem;
+  flex: 1;
+  border-radius: 999px;
+  background: rgba(6, 18, 34, 0.62);
+}
+
+.music-controls button {
+  width: 3.4rem;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2530c8;
+  font-size: 0;
+}
+
+.music-controls button::before {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-left: 0.9rem solid #2530c8;
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+}
+
+.track-list {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.9rem 1.2rem 1.1rem;
+  list-style: none;
+  background: #1e209f;
+}
+
+.track-list li {
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.track-list span {
+  font-weight: 800;
+}
+
+.track-list strong {
+  color: #ffffff;
 }
 
 .stream-card {
@@ -543,6 +773,37 @@ h3 {
     width: 48px;
     height: 48px;
     border-radius: 14px;
+  }
+
+  .presence-card,
+  .music-card {
+    min-height: auto;
+  }
+
+  .presence-widget,
+  .music-hero,
+  .music-controls {
+    padding: 1rem;
+  }
+
+  .music-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .music-hero img {
+    width: 5.25rem;
+  }
+
+  .spotify-mark {
+    right: 1rem;
+    top: 1rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .feature-pair {
+    grid-template-columns: 1fr;
   }
 }
 

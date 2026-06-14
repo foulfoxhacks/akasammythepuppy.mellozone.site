@@ -8,6 +8,7 @@ A static GitHub Pages-ready “About Me” website for a furry, VRChat, streamin
 - `style.css` - dark neon theme, responsive layout, glow effects, and animations
 - `script.js` - current year, profile image fallback, and lightweight reveal animations
 - `assets/profile.jpg` - local profile image
+- `assets/social/` - local footer social icons
 - `README.md` - setup and deployment notes
 
 ## Customize
@@ -26,6 +27,7 @@ Open `index.html` and replace or adjust the profile details:
 - Beacons and Linktree URLs
 - Discord presence user ID if you want to replace the custom card with a live Lanyard widget
 - Spotify artist, album, or playlist embed URL for the music card
+- Footer icon links and files in `assets/social/`
 - Email/contact link
 
 Open `style.css` to customize:

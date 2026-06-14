@@ -418,6 +418,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.4rem;
+  align-items: start;
 }
 
 .presence-card,
@@ -448,18 +449,39 @@ h3 {
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
+.presence-widget .button {
+  justify-self: start;
+}
+
 .presence-widget-live {
   background:
     radial-gradient(circle at 100% 0%, rgba(255, 105, 199, 0.28), transparent 8rem),
     linear-gradient(135deg, rgba(12, 202, 201, 0.7), rgba(21, 23, 76, 0.9));
 }
 
-.lanyard-widget {
+.discord-user-frame,
+.discord-server-frame {
+  display: block;
   width: 100%;
-  min-height: 7rem;
-  object-fit: contain;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(5, 8, 20, 0.72);
+}
+
+.discord-user-frame {
+  max-width: 340px;
+  height: 72px;
+}
+
+.discord-widget-shell {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 22px;
-  background: rgba(5, 8, 20, 0.6);
+  background: rgba(5, 8, 20, 0.72);
+}
+
+.discord-server-frame {
+  height: 500px;
 }
 
 .presence-widget:hover,
@@ -865,6 +887,10 @@ h3 {
   .music-hero,
   .music-controls {
     padding: 1rem;
+  }
+
+  .discord-server-frame {
+    height: 430px;
   }
 
   .music-hero {

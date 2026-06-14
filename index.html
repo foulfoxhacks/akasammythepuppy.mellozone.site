@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mello Zone community leader, streamer, proud furry puppy, mental health and LGBTQ advocate.">
   <title>Sammy The Femboy Puppy | Mello Zone</title>
-  <link rel="stylesheet" href="style.css?v=clean-mello-5">
+  <link rel="stylesheet" href="style.css?v=clean-mello-6">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -142,30 +142,44 @@
         <a class="button" href="https://www.youtube.com/@akasammythepuppy">Watch on YouTube</a>
       </article>
 
-      <div class="feature-pair" aria-label="Discord presence and music cards">
+      <div class="feature-pair" aria-label="Discord and music cards">
         <article class="card presence-card" id="presence">
-          <h2>discord presence</h2>
-          <a class="presence-widget presence-widget-live" href="https://discord.mellozone.site/" aria-label="Join the Official Mellow Zone Discord">
+          <h2>discord hub</h2>
+          <div class="presence-widget presence-widget-live">
             <!--
-              Live Discord presence:
+              Discord user embed:
               Discord user ID: 1200276108474601534.
-              Lanyard currently does not return public data for this ID, so this visible widget uses
-              the official Mello Zone Discord guild banner from your GitHub profile markdown.
-              No Discord token or secret is needed in the frontend.
+              This uses a public third-party widget and does not require a token or secret.
             -->
-            <img
-              class="lanyard-widget"
-              src="https://discord.com/api/guilds/1483048984745345099/widget.png?style=banner2"
-              alt="Mello Zone Discord server widget"
-              onerror="this.hidden = true">
-            <div class="presence-top">
-              <img src="assets/profile.jpg" alt="" aria-hidden="true">
-              <div>
-                <strong>Sammy</strong>
-                <span>@akasammythepuppy</span>
-              </div>
-              <span class="status-dot" aria-hidden="true"></span>
+            <iframe
+              class="discord-user-frame"
+              title="Discord user embed"
+              width="340"
+              height="72"
+              frameborder="0"
+              sandbox="allow-scripts"
+              src="https://widgets.vendicated.dev/user?id=1200276108474601534&theme=dark&banner=false&full-banner=true&rounded-corners=true&discord-icon=true&badges=true&guess-nitro=true&">
+            </iframe>
+
+            <div class="discord-widget-shell">
+              <!--
+                Official Discord server widget:
+                Server ID: 1483048984745345099.
+                JSON endpoint for future backend/serverless use:
+                https://discord.com/api/guilds/1483048984745345099/widget.json
+              -->
+              <iframe
+                class="discord-server-frame"
+                title="Mello Zone Discord server widget"
+                src="https://discord.com/widget?id=1483048984745345099&theme=dark"
+                width="350"
+                height="500"
+                allowtransparency="true"
+                frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+              </iframe>
             </div>
+
             <div class="activity-row">
               <div class="activity-icon" aria-hidden="true">MZ</div>
               <div>
@@ -174,7 +188,8 @@
                 <span>Stay Mello Fellow</span>
               </div>
             </div>
-          </a>
+            <a class="button button-primary" href="https://discord.mellozone.site/">Join Discord</a>
+          </div>
         </article>
 
         <article class="card music-card" id="music">
@@ -297,6 +312,6 @@
     <p>&copy; <span id="year">2026</span> Sammy The Femboy Puppy</p>
   </footer>
 
-  <script src="script.js?v=clean-mello-5"></script>
+  <script src="script.js?v=clean-mello-6"></script>
 </body>
 </html>

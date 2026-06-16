@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sammy The Femboy Puppy: Mello Zone community leader, furry creator, VRChat streamer, and cozy neon chaos builder.">
+  <meta name="description" content="Sammy The Femboy Puppy: creator portfolio, Mello Zone community hub, VRChat, streaming, art, music, and community story.">
   <title>Sammy The Femboy Puppy | Mello Zone</title>
-  <link rel="stylesheet" href="style.css?v=android-banner-1">
+  <link rel="stylesheet" href="style.css?v=portfolio-drawer-1">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,41 +21,48 @@
     <div class="tail-swish"></div>
   </div>
 
-  <header class="scene-hero" id="top">
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a class="brand-lockup" href="#top" aria-label="Sammy home">
-        <!-- Profile image: replace assets/profile.jpg with your preferred avatar or VRChat photo. -->
-        <img src="assets/profile.jpg" alt="">
-        <span>Sammy</span>
-      </a>
-      <div class="nav-links">
-        <a href="#top">Home</a>
-        <a href="#links">Links</a>
-        <a href="#live">Live</a>
-        <a href="#community">Community</a>
-      </div>
-    </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span class="sr-only">Open navigation menu</span>
+  </button>
 
+  <div class="menu-scrim" data-menu-close hidden></div>
+
+  <aside class="side-menu" id="site-menu" aria-label="Site navigation">
+    <a class="brand-lockup" href="#top" data-menu-link>
+      <img src="assets/profile.jpg" alt="">
+      <span>Sammy</span>
+    </a>
+    <nav class="drawer-links">
+      <a href="#links" data-menu-link>My Links</a>
+      <a href="#about" data-menu-link>About Me</a>
+      <a href="#inspiration" data-menu-link>My Inspiration</a>
+      <a href="#art" data-menu-link>Art I've Commissioned</a>
+      <a href="#journey" data-menu-link>My Accomplishments</a>
+      <a href="#backstory" data-menu-link>Backstory & Events</a>
+      <a href="#games" data-menu-link>Games I Play</a>
+      <a href="#boundaries" data-menu-link>Do's & Don'ts</a>
+      <a href="#mello-zone" data-menu-link>What Is Mello Zone?</a>
+      <a href="#schedule" data-menu-link>Stream Schedule</a>
+    </nav>
+  </aside>
+
+  <header class="scene-hero" id="top">
     <div class="scene-overlay"></div>
 
     <section class="hero-terminal" aria-labelledby="hero-title">
-      <p class="eyebrow">Mello Zone signal online</p>
+      <p class="eyebrow">Creator portfolio online</p>
       <h1 id="hero-title">Sammy The Femboy Puppy</h1>
       <p class="terminal-copy">
-        I'm Sammy, a furry / VRChat / streaming creator building a cozy neon corner for friends,
-        creativity, mental health support, LGBTQ positivity, and community chaos with a soft landing.
+        Welcome to my personal page. Whether it's the Mello Zone you're seeking or learning about me,
+        this is the place for my links, story, community, streams, art, and projects.
       </p>
 
-      <div class="terminal-links" id="links" aria-label="Featured links">
-        <!-- Social links: update these URLs any time your handles change. -->
-        <a href="https://www.twitch.tv/akasammythepuppy"><span>Twitch</span></a>
-        <a href="https://discord.mellozone.site/"><span>Discord Server</span></a>
-        <a href="https://beacons.ai/akasammythepuppy"><span>Beacons</span></a>
-        <a href="https://linktr.ee/akasammythepuppy"><span>Linktree</span></a>
-        <a href="https://www.youtube.com/@akasammythepuppy"><span>YouTube</span></a>
-        <a href="https://github.com/foulfoxhacks"><span>GitHub</span></a>
-        <a href="https://open.spotify.com/user/2z4kruowiuhpf3w0vvhmhdpoz"><span>Spotify</span></a>
-        <a href="mailto:contactus@mellozone.site"><span>Contact</span></a>
+      <div class="terminal-actions">
+        <a class="button button-primary" href="#links">Explore Links</a>
+        <a class="button" href="#mello-zone">Meet Mello Zone</a>
       </div>
     </section>
 
@@ -80,172 +87,362 @@
   </header>
 
   <main class="page-wrapper" id="main">
-    <section class="intro-grid" aria-label="About Sammy">
-      <article class="card about-card" id="about">
+    <section class="portfolio-section" id="links" aria-labelledby="links-title">
+      <div class="section-heading">
+        <p class="eyebrow">my links</p>
+        <h2 id="links-title">Personal and community doors</h2>
+        <p>Personal creator links are separate from Mello Zone community spaces so visitors can find the right path quickly.</p>
+      </div>
+      <div class="link-columns">
+        <article class="card link-panel">
+          <h3>Personal Links</h3>
+          <div class="link-list">
+            <a href="https://beacons.ai/akasammythepuppy">Beacons</a>
+            <a href="https://linktr.ee/akasammythepuppy">Linktree</a>
+            <a href="https://www.twitch.tv/akasammythepuppy">Twitch</a>
+            <a href="https://www.youtube.com/@akasammythepuppy">YouTube</a>
+            <a href="https://www.tiktok.com/@akasammythepuppy">TikTok</a>
+            <a href="https://x.com/xitscutiesammyx">X / Twitter</a>
+            <a href="https://www.instagram.com/akasammythepuppy">Instagram</a>
+            <a href="https://github.com/foulfoxhacks">GitHub</a>
+            <a href="mailto:contactus@mellozone.site">Email Contact</a>
+          </div>
+        </article>
+
+        <article class="card link-panel">
+          <h3>Community Links</h3>
+          <div class="link-list">
+            <a href="https://discord.mellozone.site/">Mello Zone Discord</a>
+            <a href="https://vrchat.com/home/group/grp_1741e680-d563-4c53-a784-b17af5954a54">VRChat Group</a>
+            <a href="#schedule">Stream & Event Schedule</a>
+            <a href="#mello-zone">What Is Mello Zone?</a>
+            <a href="#boundaries">Community Boundaries</a>
+            <a href="#art">Commissioned Art Credits</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section section-grid" id="about" aria-labelledby="about-title">
+      <article class="card story-card">
         <p class="eyebrow">about me</p>
-        <h2>cozy cyber-furry creator energy</h2>
+        <h2 id="about-title">Hi, I'm Sammy</h2>
         <p>
-          I create furry, VRChat, streaming, and community content around connection, expressive avatars,
-          creative projects, and safer spaces. Mello Zone is the heart of it: a friendly, weird, supportive
-          place for people who want to hang out, make things, and feel seen.
+          I'm Sammy, also known as Sammy The Puppy and Sammy The Foxxo. I am a content creator,
+          community advocate, and someone who has spent much of life learning how to keep moving
+          forward through difficult circumstances.
+        </p>
+        <p>
+          Like everyone else, I am human. I make mistakes, I learn, and I keep growing. I first
+          entered the furry fandom in May 2023, though I personally recognize December 23, 2023
+          as the date my journey truly began.
+        </p>
+        <p>
+          Through my content, streams, Discord community, and projects, my goal is to help create
+          a bridge where people can feel welcomed, valued, and supported.
         </p>
       </article>
 
-      <article class="card datapad-card">
-        <p class="eyebrow">data-pad</p>
-        <h2>sammy snapshot</h2>
-        <dl class="datapad-list">
+      <article class="card live-presence-card" id="presence">
+        <p class="eyebrow">discord presence</p>
+        <h2>Live status</h2>
+        <div class="lanyard-card" data-lanyard-card>
+          <img class="lanyard-avatar" data-lanyard-avatar src="assets/profile.jpg" alt="">
           <div>
-            <dt>Class</dt>
-            <dd>Neon Fox Pup / Community Builder</dd>
+            <strong data-lanyard-name>Sammy</strong>
+            <span class="status-pill" data-lanyard-status>Checking presence...</span>
+            <p data-lanyard-activity>Trying Lanyard first, then falling back to the public Discord widgets.</p>
           </div>
-          <div>
-            <dt>Home Base</dt>
-            <dd>The Mello Zone Furry Community</dd>
-          </div>
-          <div>
-            <dt>Creates</dt>
-            <dd>VRChat clips, streams, videos, music links, and web projects</dd>
-          </div>
-          <div>
-            <dt>Status</dt>
-            <dd>Building cozy corners of the internet</dd>
-          </div>
-        </dl>
+        </div>
+        <iframe
+          class="discord-user-frame"
+          title="Discord user embed"
+          width="340"
+          height="72"
+          frameborder="0"
+          sandbox="allow-scripts"
+          src="https://widgets.vendicated.dev/user?id=1200276108474601534&theme=dark&banner=false&full-banner=true&rounded-corners=true&discord-icon=true&badges=true&guess-nitro=true&">
+        </iframe>
       </article>
     </section>
 
-    <section class="card projects-card" id="projects" aria-labelledby="projects-title">
+    <section class="portfolio-section" id="inspiration" aria-labelledby="inspiration-title">
+      <article class="card wide-card">
+        <p class="eyebrow">my inspiration</p>
+        <h2 id="inspiration-title">Build the community I wished I had found</h2>
+        <p>
+          Inspiration can come from many places. For me, it came from both the good experiences and the difficult ones.
+          I have seen communities filled with amazing people, and I have also seen environments where drama, exclusion,
+          favoritism, poor communication, and negativity overshadowed the belonging people were searching for.
+        </p>
+        <p>
+          Mello Zone was created from a simple idea: build the kind of community I wished I had found when I needed it most.
+          A place where people are encouraged to grow rather than be defined by mistakes, where communication matters,
+          creativity is celebrated, and kindness is not treated as weakness.
+        </p>
+        <div class="pill-cloud">
+          <span>Furry fandom creativity</span>
+          <span>VRChat friendships</span>
+          <span>Music and storytelling</span>
+          <span>Personal growth</span>
+          <span>Community building</span>
+          <span>Helping others feel less alone</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="portfolio-section section-grid" id="mello-zone" aria-labelledby="mello-title">
+      <article class="card story-card">
+        <p class="eyebrow">community</p>
+        <h2 id="mello-title">What is Mello Zone Furry Community?</h2>
+        <p>
+          Mello Zone is more than a Discord server, more than a website, and more than a content brand.
+          It is a community built around people.
+        </p>
+        <p>
+          The mission is to create an environment where members feel welcomed regardless of their background,
+          experience level, identity, or personal journey. Communities grow strongest when they are built on
+          respect, communication, inclusivity, creativity, accountability, and compassion.
+        </p>
+        <a class="button button-primary" href="https://discord.mellozone.site/">Join Mello Zone</a>
+      </article>
+
+      <article class="card values-card">
+        <p class="eyebrow">community values</p>
+        <h2>Our values</h2>
+        <div class="value-list">
+          <div><strong>Acceptance</strong><span>Everyone deserves a place to belong.</span></div>
+          <div><strong>Growth</strong><span>People should be allowed to learn from mistakes.</span></div>
+          <div><strong>Creativity</strong><span>Art, stories, characters, and self-expression matter.</span></div>
+          <div><strong>Respect</strong><span>Disagreement does not require disrespect.</span></div>
+          <div><strong>Community</strong><span>The strongest communities are built together.</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="portfolio-section" id="why-join" aria-labelledby="why-title">
+      <article class="card wide-card">
+        <p class="eyebrow">why join?</p>
+        <h2 id="why-title">Why people stay</h2>
+        <div class="mini-grid">
+          <span>Friendly community members</span>
+          <span>VRChat meetups</span>
+          <span>Gaming sessions</span>
+          <span>Creative showcases</span>
+          <span>Community events</span>
+          <span>Welcoming environment</span>
+          <span>Opportunities to make friends</span>
+          <span>Supportive conversations</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="portfolio-section" id="journey" aria-labelledby="journey-title">
+      <article class="card wide-card">
+        <p class="eyebrow">my accomplishments</p>
+        <h2 id="journey-title">What we've built together</h2>
+        <p>Success is not measured solely by numbers. It is measured by impact.</p>
+        <div class="timeline-grid">
+          <div><strong>Community Building</strong><span>Founded Mello Zone Furry Community and built welcoming spaces focused on inclusivity.</span></div>
+          <div><strong>Content Creation</strong><span>Produced content across TikTok, Twitch, YouTube, Discord, and VRChat.</span></div>
+          <div><strong>Technical Projects</strong><span>Built and maintained websites, platforms, and community infrastructure.</span></div>
+          <div><strong>Community Advocacy</strong><span>Promoted safer online spaces, communication, accountability, and support.</span></div>
+          <div><strong>Personal Growth</strong><span>Continued moving forward despite adversity and turned challenges into motivation.</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="portfolio-section" id="backstory" aria-labelledby="backstory-title">
       <div class="section-heading">
-        <p class="eyebrow">creator zones</p>
-        <h2 id="projects-title">projects</h2>
-        <p>Quick routes to the worlds, streams, and community spaces people are usually hunting for.</p>
+        <p class="eyebrow">backstory and critical events</p>
+        <h2 id="backstory-title">Important context</h2>
+        <p>These panels keep heavier topics optional while still giving the story room to breathe.</p>
       </div>
-      <div class="project-grid">
-        <a href="https://discord.mellozone.site/">
-          <strong>Mello Zone</strong>
-          <span>Community hub, events, support, and friendly chaos.</span>
-        </a>
-        <a href="https://www.youtube.com/@akasammythepuppy">
-          <strong>VRChat Content</strong>
-          <span>Avatar moments, world hangouts, clips, and social energy.</span>
-        </a>
-        <a href="https://www.twitch.tv/akasammythepuppy">
-          <strong>Streaming</strong>
-          <span>Live hangouts, creator updates, games, and community nights.</span>
-        </a>
-        <a href="https://discord.mellozone.site/">
-          <strong>Community Projects</strong>
-          <span>Creative collabs, safer spaces, and Mello Zone experiments.</span>
-        </a>
-        <a href="https://github.com/foulfoxhacks">
-          <strong>GitHub / Development</strong>
-          <span>Static sites, tools, automation, OSINT, and security learning.</span>
-        </a>
+      <div class="accordion-stack">
+        <details class="card detail-card">
+          <summary>My journey into the fandom</summary>
+          <p>
+            I first entered the furry fandom in May 2023, and I personally recognize December 23, 2023
+            as the date my journey truly began. Since then, I have focused on building something bigger
+            than myself: a community centered around acceptance, inclusivity, understanding, and connection.
+          </p>
+        </details>
+        <details class="card detail-card">
+          <summary>Personal growth and resilience</summary>
+          <p>
+            Difficult experiences shaped parts of my story, but they do not define me. What matters most
+            is the willingness to learn, grow, and keep moving forward.
+          </p>
+        </details>
+        <details class="card detail-card">
+          <summary>Content safety and community notice</summary>
+          <p>
+            Mello Zone may discuss community safety, mental health awareness, personal experiences, and
+            educational topics related to online communities. These conversations are meant to inform,
+            encourage accountability, and promote safer environments, never harassment or targeted hostility.
+          </p>
+        </details>
       </div>
     </section>
 
-    <section class="feature-grid" aria-label="Live community and music">
-      <article class="card presence-card" id="community">
-        <p class="eyebrow">discord presence</p>
-        <h2>Mello Zone hub</h2>
-        <div class="discord-stack">
-          <!--
-            Discord user embed:
-            Discord user ID: 1200276108474601534.
-            This uses a public third-party widget and does not require a token or secret.
-          -->
-          <iframe
-            class="discord-user-frame"
-            title="Discord user embed"
-            width="340"
-            height="72"
-            frameborder="0"
-            sandbox="allow-scripts"
-            src="https://widgets.vendicated.dev/user?id=1200276108474601534&theme=dark&banner=false&full-banner=true&rounded-corners=true&discord-icon=true&badges=true&guess-nitro=true&">
-          </iframe>
-
-          <p class="discord-json-status" data-discord-stats>
-            Live server status loads when Discord allows the widget JSON request.
-          </p>
-
-          <div class="discord-widget-shell">
-            <!--
-              Official Discord server widget:
-              Server ID: 1483048984745345099.
-              JSON endpoint for future backend/serverless use:
-              https://discord.com/api/guilds/1483048984745345099/widget.json
-            -->
-            <iframe
-              class="discord-server-frame"
-              title="Mello Zone Discord server widget"
-              src="https://discord.com/widget?id=1483048984745345099&theme=dark"
-              width="350"
-              height="500"
-              allowtransparency="true"
-              frameborder="0"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-            </iframe>
-          </div>
+    <section class="portfolio-section section-grid" id="games" aria-labelledby="games-title">
+      <article class="card story-card">
+        <p class="eyebrow">what games I play</p>
+        <h2 id="games-title">Games and hangout spaces</h2>
+        <p>
+          Gaming has always been a way to connect with people, create memories, and explore new experiences.
+          Many friendships, stories, and community moments begin through games.
+        </p>
+        <div class="pill-cloud">
+          <span>VRChat</span>
+          <span>Fortnite</span>
+          <span>Minecraft</span>
+          <span>GTA / FiveM</span>
+          <span>Multiplayer games</span>
+          <span>Social and creative experiences</span>
         </div>
-        <a class="button button-primary" href="https://discord.mellozone.site/">Join Discord</a>
       </article>
 
       <article class="card music-card" id="music">
-        <p class="eyebrow">my music</p>
-        <h2>recently played</h2>
+        <p class="eyebrow">music and creativity</p>
+        <h2>Recently played</h2>
         <a class="recently-played-link" href="https://open.spotify.com/user/2z4kruowiuhpf3w0vvhmhdpoz">
-          <!--
-            Spotify recently played:
-            This public image endpoint is safe for a static site and does not expose Spotify secrets.
-            Source project: https://github.com/JeffreyCA/spotify-recently-played-readme
-          -->
           <img
             class="recently-played-card"
             src="https://spotify-recently-played-readme.vercel.app/api?user=2z4kruowiuhpf3w0vvhmhdpoz&count=5&width=500&unique=true"
             alt="Spotify recently played tracks for Sammy">
         </a>
-        <a class="button" href="https://open.spotify.com/user/2z4kruowiuhpf3w0vvhmhdpoz">Open Spotify</a>
+        <p>Music, storytelling, editing, and content creation all help shape the atmosphere behind Mello Zone.</p>
       </article>
     </section>
 
-    <section class="card stream-card" id="live" aria-labelledby="live-title">
+    <section class="portfolio-section" id="boundaries" aria-labelledby="boundaries-title">
       <div class="section-heading">
-        <p class="eyebrow">watch me live</p>
-        <h2 id="live-title">Twitch livestream</h2>
-        <p>Catch streams, VRChat hangouts, and highlight moments when the channel is online.</p>
+        <p class="eyebrow">do's and don'ts</p>
+        <h2 id="boundaries-title">Boundaries, limits, and supportive interaction</h2>
       </div>
-      <div class="responsive-embed">
-        <!--
-          Twitch channel: replace "akasammythepuppy" with your channel.
-          GitHub Pages parent domain: this project page is hosted on foulfoxhacks.github.io.
-          Twitch embeds require the parent parameter to match the domain hosting the page.
-        -->
-        <iframe
-          src="https://player.twitch.tv/?channel=akasammythepuppy&parent=foulfoxhacks.github.io"
-          title="Twitch livestream player"
-          allowfullscreen>
-        </iframe>
+      <div class="accordion-stack">
+        <details class="card detail-card" open>
+          <summary>Boundaries</summary>
+          <p>
+            Respect personal boundaries, privacy, and individuality. Everyone deserves the opportunity
+            to grow without being permanently defined by their worst moments.
+          </p>
+        </details>
+        <details class="card detail-card">
+          <summary>Please avoid</summary>
+          <ul>
+            <li>Harassment, bullying, gossip, or rumor spreading.</li>
+            <li>Exclusionary behavior or weaponizing personal struggles.</li>
+            <li>Creating unnecessary drama or disrespecting personal boundaries.</li>
+            <li>Speaking for people instead of speaking with them.</li>
+          </ul>
+        </details>
+        <details class="card detail-card">
+          <summary>Supportive ways to interact</summary>
+          <ul>
+            <li>Be respectful, patient, and honest.</li>
+            <li>Encourage growth and support fellow community members.</li>
+            <li>Help newcomers feel welcome.</li>
+            <li>Choose communication before assumptions.</li>
+          </ul>
+        </details>
       </div>
-      <a class="button" href="https://www.twitch.tv/akasammythepuppy">Open Twitch Channel</a>
     </section>
 
-    <section class="contact-strip" id="contact" aria-label="Contact and featured content">
-      <article class="card feature-card">
-        <p class="eyebrow">featured</p>
-        <h2>latest highlight</h2>
-        <p>Use this space for the newest video, stream clip, community update, or Mello Zone announcement.</p>
-        <a class="button" href="https://www.youtube.com/@akasammythepuppy">Watch on YouTube</a>
+    <section class="portfolio-section" id="art" aria-labelledby="art-title">
+      <div class="section-heading">
+        <p class="eyebrow">art I've commissioned</p>
+        <h2 id="art-title">Commissioned art and credits</h2>
+        <p>Artwork, character designs, gifts, references, and creative projects deserve clear creator credit.</p>
+      </div>
+      <div class="art-grid">
+        <article class="card art-card">
+          <div class="art-placeholder">sammy_pride</div>
+          <h3>sammy_pride</h3>
+          <p>Commissioned piece by Chubily_Marshmello from Cappi's Cafe.</p>
+          <a class="button" href="https://t.me/infoandwips">Artist Telegram</a>
+        </article>
+        <article class="card art-card">
+          <div class="art-placeholder">piece 02</div>
+          <h3>Second commissioned piece</h3>
+          <p>Placeholder card ready for the second image, title, artist credit, and social link.</p>
+          <span class="button ghost-button">Credit pending</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-section" id="schedule" aria-labelledby="schedule-title">
+      <article class="card wide-card schedule-card">
+        <p class="eyebrow">stream schedule</p>
+        <h2 id="schedule-title">Calendar and events</h2>
+        <p>
+          Streams, community events, and special activities may change depending on availability, projects,
+          events, and life circumstances. The embedded calendar is the best place to check first.
+        </p>
+        <div class="calendar-frame">
+          <iframe
+            title="Sammy and Mello Zone public stream schedule"
+            src="https://calendar.google.com/calendar/embed?src=6d045b98b8597cf55bd5cb77a89142013ea29d64094ac925afd5aceca5329af9%40group.calendar.google.com&ctz=America%2FNew_York"
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="button-row">
+          <a class="button button-primary" href="https://calendar.google.com/calendar/embed?src=6d045b98b8597cf55bd5cb77a89142013ea29d64094ac925afd5aceca5329af9%40group.calendar.google.com&ctz=America%2FNew_York">Open Calendar</a>
+          <a class="button" href="https://calendar.google.com/calendar/ical/6d045b98b8597cf55bd5cb77a89142013ea29d64094ac925afd5aceca5329af9%40group.calendar.google.com/public/basic.ics">Subscribe via iCalendar</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="portfolio-section section-grid" id="live" aria-label="Live and Discord community">
+      <article class="card stream-card">
+        <p class="eyebrow">watch me live</p>
+        <h2>Twitch livestream</h2>
+        <p>Catch streams, VRChat hangouts, and highlight moments when the channel is online.</p>
+        <div class="responsive-embed">
+          <iframe
+            src="https://player.twitch.tv/?channel=akasammythepuppy&parent=akasammythepuppy.mellozone.site&parent=foulfoxhacks.github.io"
+            title="Twitch livestream player"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <a class="button" href="https://www.twitch.tv/akasammythepuppy">Open Twitch Channel</a>
       </article>
 
-      <article class="card contact-card">
-        <p class="eyebrow">contact</p>
-        <h2>collabs & community</h2>
-        <p>For community, collaborations, or business contact, Discord and email are the best doors.</p>
-        <div class="button-row">
-          <a class="button button-primary" href="https://discord.mellozone.site/">Join Discord</a>
-          <a class="button" href="mailto:contactus@mellozone.site">Email</a>
+      <article class="card presence-card">
+        <p class="eyebrow">community widget</p>
+        <h2>Mello Zone hub</h2>
+        <p class="discord-json-status" data-discord-stats>
+          Live server status loads when Discord allows the widget JSON request.
+        </p>
+        <div class="discord-widget-shell">
+          <iframe
+            class="discord-server-frame"
+            title="Mello Zone Discord server widget"
+            src="https://discord.com/widget?id=1483048984745345099&theme=dark"
+            width="350"
+            height="500"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+          </iframe>
         </div>
+        <a class="button button-primary" href="https://discord.mellozone.site/">Join Discord</a>
+      </article>
+    </section>
+
+    <section class="portfolio-section" id="vision" aria-labelledby="vision-title">
+      <article class="card wide-card legacy-card">
+        <p class="eyebrow">future vision</p>
+        <h2 id="vision-title">What I want to be remembered for</h2>
+        <p>
+          I do not want to be remembered for follower counts, views, or statistics. I want to be remembered
+          for creating a place where people felt welcome when they needed it most.
+        </p>
+        <p>
+          If someone leaves Mello Zone feeling more accepted, more hopeful, or less alone than when they arrived,
+          then I have accomplished what I set out to do.
+        </p>
       </article>
     </section>
   </main>
@@ -253,7 +450,6 @@
   <footer class="social-footer" id="socials">
     <p>find me on</p>
     <div class="social-links">
-      <!-- Footer icons: local asset paths are project-page safe for GitHub Pages. -->
       <a href="https://www.twitch.tv/akasammythepuppy" aria-label="Twitch">
         <img src="assets/social/Twitch_Glitch_Logo_Black.svg.png" alt="Twitch">
       </a>
@@ -283,6 +479,6 @@
     <p>&copy; <span id="year">2026</span> Sammy The Femboy Puppy</p>
   </footer>
 
-  <script src="script.js?v=android-banner-1"></script>
+  <script src="script.js?v=portfolio-drawer-1"></script>
 </body>
 </html>

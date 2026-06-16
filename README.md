@@ -2,13 +2,13 @@
 
 A static GitHub Pages-ready "About Me" website for a furry, VRChat, streaming, and community creator. It uses only HTML, CSS, and a small amount of vanilla JavaScript.
 
-The current layout uses a full-screen VRChat/avatar scene, a floating glass bio terminal, chunky creator-page navigation, neon hypno fox accents, and deeper cards for Discord, Spotify, Twitch, projects, and contact.
+The current layout uses a full-screen VRChat/avatar scene, a floating glass bio terminal, a slide-out side menu, neon hypno fox accents, and portfolio sections for personal links, community links, Discord, Spotify, Twitch, art, story, boundaries, and schedule.
 
 ## Files
 
-- `index.html` - page content, sections, links, Discord widgets, Spotify card, and Twitch iframe
-- `style.css` - dark neon scene layout, responsive cards, glow effects, and animations
-- `script.js` - current year, profile image fallback, Discord widget JSON status, and lightweight reveal animations
+- `index.html` - portfolio sections, side menu links, Discord widgets, Spotify card, Google Calendar, and Twitch iframe
+- `style.css` - dark neon scene layout, side drawer, responsive cards, glow effects, and animations
+- `script.js` - current year, menu drawer, profile fallback, Discord/Lanyard presence, Discord widget JSON status, and reveal animations
 - `assets/profile.jpg` - local profile image and hero scene background
 - `assets/social/` - local footer social icons
 - `README.md` - setup and deployment notes
@@ -28,6 +28,8 @@ Open `index.html` and replace or adjust the profile details:
 - GitHub URL
 - Beacons and Linktree URLs
 - Discord presence user ID
+- VRChat group link
+- Google Calendar embed and public iCalendar link
 - Spotify profile and recently played image URL
 - Footer icon links and files in `assets/social/`
 - Email/contact link
@@ -39,6 +41,7 @@ Open `style.css` to customize:
 - Background animation styles
 - Profile/avatar scene background and presentation
 - Card glow and hover effects
+- Side menu and drawer spacing
 - Social icon styling
 - Keep Android Open banner blue/cyan override in the `android-banner-slot` section
 
@@ -55,10 +58,15 @@ The banner is inserted into `#keep-android-open-banner`, then recolored in `styl
 ## Live Integrations
 
 - Discord user ID: `1200276108474601534`.
+- Lanyard presence uses `https://api.lanyard.rest/v1/users/1200276108474601534` when available.
+- If Lanyard returns unavailable data, the page falls back to the public Discord user widget.
 - Discord user embed uses `https://widgets.vendicated.dev/user?id=1200276108474601534`.
 - Mello Zone server widget uses Discord server ID `1483048984745345099`.
 - Server widget JSON endpoint: `https://discord.com/api/guilds/1483048984745345099/widget.json`.
 - The page tries to read the public Discord widget JSON with vanilla JavaScript. If browser/CORS rules block it, the iframe widget still works.
+- VRChat group link: `https://vrchat.com/home/group/grp_1741e680-d563-4c53-a784-b17af5954a54`.
+- Public Google Calendar embed uses calendar ID `6d045b98b8597cf55bd5cb77a89142013ea29d64094ac925afd5aceca5329af9@group.calendar.google.com`.
+- Only the public calendar/iCalendar link should be used in this static site. Do not publish private calendar feed URLs.
 - Spotify profile link: `https://open.spotify.com/user/2z4kruowiuhpf3w0vvhmhdpoz`.
 - Spotify recently played image: `https://spotify-recently-played-readme.vercel.app/api?user=2z4kruowiuhpf3w0vvhmhdpoz&count=5&width=500&unique=true`.
 - Spotify user profiles do not currently work as direct Spotify embeds. Use an artist, album, playlist, track, show, or episode embed URL if you want an iframe.
@@ -81,9 +89,9 @@ The Twitch iframe currently uses:
 https://player.twitch.tv/?channel=akasammythepuppy&parent=foulfoxhacks.github.io
 ```
 
-Replace `akasammythepuppy` with your Twitch channel name and replace `foulfoxhacks.github.io` with the exact GitHub Pages domain that will host the site.
+The live page also includes `parent=akasammythepuppy.mellozone.site` for the custom domain. Replace `akasammythepuppy` with your Twitch channel name and replace the parent domains with the exact domains that host the site.
 
-Twitch embeds require the `parent` parameter to match the site domain. This project page is hosted at `https://foulfoxhacks.github.io/akasammythepuppy.github.io/`, so the parent is `foulfoxhacks.github.io`. If it is hosted under a custom domain later, use that custom domain instead.
+Twitch embeds require the `parent` parameter to match the site domain. This project is currently served through `https://akasammythepuppy.mellozone.site/`.
 
 ## Deploy To GitHub Pages
 

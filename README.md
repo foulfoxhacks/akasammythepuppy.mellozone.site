@@ -1,13 +1,15 @@
 # Sammy The Femboy Puppy's Landing Page
 
-A static GitHub Pages-ready “About Me” website for a furry, VRChat, streaming, and community creator. It uses only HTML, CSS, and a small amount of vanilla JavaScript.
+A static GitHub Pages-ready "About Me" website for a furry, VRChat, streaming, and community creator. It uses only HTML, CSS, and a small amount of vanilla JavaScript.
+
+The current layout uses a full-screen VRChat/avatar scene, a floating glass bio terminal, chunky creator-page navigation, neon hypno fox accents, and deeper cards for Discord, Spotify, Twitch, projects, and contact.
 
 ## Files
 
-- `index.html` - page content, sections, links, and Twitch iframe
-- `style.css` - dark neon theme, responsive layout, glow effects, and animations
-- `script.js` - current year, profile image fallback, and lightweight reveal animations
-- `assets/profile.jpg` - local profile image
+- `index.html` - page content, sections, links, Discord widgets, Spotify card, and Twitch iframe
+- `style.css` - dark neon scene layout, responsive cards, glow effects, and animations
+- `script.js` - current year, profile image fallback, Discord widget JSON status, and lightweight reveal animations
+- `assets/profile.jpg` - local profile image and hero scene background
 - `assets/social/` - local footer social icons
 - `README.md` - setup and deployment notes
 
@@ -25,10 +27,18 @@ Open `index.html` and replace or adjust the profile details:
 - Instagram/X/Facebook URLs
 - GitHub URL
 - Beacons and Linktree URLs
-- Discord presence user ID if you want to replace the custom card with a live Lanyard widget
-- Spotify artist, album, or playlist embed URL for the music card
+- Discord presence user ID
+- Spotify profile and recently played image URL
 - Footer icon links and files in `assets/social/`
 - Email/contact link
+
+Open `style.css` to customize:
+
+- Accent colors in the `:root` section
+- Background animation styles
+- Profile/avatar scene background and presentation
+- Card glow and hover effects
+- Social icon styling
 
 ## Live Integrations
 
@@ -42,13 +52,6 @@ Open `index.html` and replace or adjust the profile details:
 - Spotify user profiles do not currently work as direct Spotify embeds. Use an artist, album, playlist, track, show, or episode embed URL if you want an iframe.
 - Do not put a Spotify client secret in this static site. GitHub Pages is frontend-only, so secrets would be visible to visitors. Use a backend or serverless function if you later want Spotify Web API data.
 
-Open `style.css` to customize:
-
-- Accent colors in the `:root` section
-- Background animation styles
-- Profile/avatar presentation
-- Card glow and hover effects
-
 ## Link References
 
 This version uses public details from:
@@ -56,7 +59,7 @@ This version uses public details from:
 - `https://beacons.ai/akasammythepuppy`
 - `https://linktr.ee/akasammythepuppy`
 
-The layout is inspired by compact creator pages: a clean centered hero, rounded info cards, stacked links, social tiles, and a creator hub feel.
+The layout is inspired by compact creator pages with a large character background, floating bio/link panel, rounded nav buttons, social tiles, and a creator hub feel.
 
 ## Twitch Embed
 

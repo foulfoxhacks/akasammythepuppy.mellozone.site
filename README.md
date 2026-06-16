@@ -31,6 +31,7 @@ Open `index.html` and replace or adjust the profile details:
 - Spotify profile and recently played image URL
 - Footer icon links and files in `assets/social/`
 - Email/contact link
+- Keep Android Open banner query parameters near the top of `index.html`
 
 Open `style.css` to customize:
 
@@ -39,6 +40,17 @@ Open `style.css` to customize:
 - Profile/avatar scene background and presentation
 - Card glow and hover effects
 - Social icon styling
+- Keep Android Open banner blue/cyan override in the `android-banner-slot` section
+
+## Keep Android Open Banner
+
+The site includes the self-contained Keep Android Open countdown banner:
+
+```html
+<script src="https://keepandroidopen.org/banner.js?id=keep-android-open-banner&size=minimal&animation=off&hidebutton=off"></script>
+```
+
+The banner is inserted into `#keep-android-open-banner`, then recolored in `style.css` with the blue/cyan site theme. Change the query parameters in `index.html` if you want a different size, language, close button, link, or animation setting.
 
 ## Live Integrations
 

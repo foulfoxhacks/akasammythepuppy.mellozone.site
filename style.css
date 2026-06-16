@@ -20,6 +20,7 @@
   --shadow: 0 26px 80px rgba(0, 0, 0, 0.42);
   --radius: 20px;
   --max-width: 1180px;
+  --android-banner-offset: 2.15rem;
 }
 
 * {
@@ -74,6 +75,49 @@ img {
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+/*
+  Keep Android Open banner:
+  The external script injects .kao-banner into this slot. These higher-specificity
+  rules recolor it blue/cyan so it matches the site.
+*/
+.android-banner-slot {
+  position: relative;
+  z-index: 45;
+  min-height: var(--android-banner-offset);
+  background: linear-gradient(90deg, #07306e, #0757b7 42%, #04a9d8);
+}
+
+#keep-android-open-banner .kao-banner {
+  min-height: var(--android-banner-offset) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+  padding: 0.42rem 1rem !important;
+  border-bottom: 1px solid rgba(111, 230, 255, 0.7) !important;
+  background:
+    linear-gradient(90deg, rgba(7, 48, 110, 0.98), rgba(6, 86, 186, 0.98) 46%, rgba(4, 169, 216, 0.94)) !important;
+  color: #ffffff !important;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace !important;
+  font-size: clamp(0.72rem, 1.5vw, 0.92rem) !important;
+  font-weight: 950 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.25 !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.42) !important;
+  box-shadow: 0 0 26px rgba(63, 242, 255, 0.18) !important;
+}
+
+#keep-android-open-banner .kao-banner a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+#keep-android-open-banner .kao-banner a:hover,
+#keep-android-open-banner .kao-banner a:focus-visible {
+  color: #bcf9ff !important;
+  text-decoration: underline !important;
 }
 
 .background-effects {
@@ -164,7 +208,7 @@ img {
   min-height: 100svh;
   display: grid;
   align-items: center;
-  padding: 6.5rem 1.2rem 5.5rem;
+  padding: 7.35rem 1.2rem 4.8rem;
   overflow: hidden;
   isolation: isolate;
 }
@@ -211,7 +255,7 @@ img {
 .site-nav {
   position: fixed;
   left: 50%;
-  top: 0.75rem;
+  top: calc(var(--android-banner-offset) + 0.75rem);
   z-index: 30;
   width: min(calc(100% - 1rem), 760px);
   min-height: 4rem;
@@ -278,8 +322,8 @@ img {
 
 .hero-terminal {
   width: min(100%, 780px);
-  margin: 1.5rem auto 0;
-  padding: 1.8rem;
+  margin: 1.15rem auto 0;
+  padding: 1.55rem 1.8rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius);
   background:
@@ -306,8 +350,8 @@ h2 {
 }
 
 h1 {
-  margin-bottom: 1.25rem;
-  font-size: 3.35rem;
+  margin-bottom: 1rem;
+  font-size: clamp(2.65rem, 4.2vw, 3.35rem);
   font-style: italic;
   text-shadow: 0 0 24px rgba(164, 109, 255, 0.68), 0 0 42px rgba(255, 98, 207, 0.34);
 }
@@ -320,7 +364,7 @@ h2 {
 
 .terminal-copy {
   max-width: 64ch;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
   color: #ffffff;
   font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
   font-size: 1.02rem;
@@ -330,8 +374,10 @@ h2 {
 
 .terminal-links {
   display: grid;
-  gap: 0.6rem;
-  margin-top: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  max-width: 520px;
+  margin-top: 0.65rem;
 }
 
 .terminal-links a {
@@ -358,7 +404,7 @@ h2 {
 }
 
 .terminal-links a::after {
-  content: "↗";
+  content: "->";
   color: var(--pink);
   font-weight: 950;
 }
@@ -373,7 +419,7 @@ h2 {
 .hero-status-card {
   position: absolute;
   right: max(1.2rem, calc((100vw - var(--max-width)) / 2));
-  bottom: 5.8rem;
+  bottom: 4.4rem;
   z-index: 4;
   width: min(21rem, calc(100% - 2.4rem));
   display: flex;
@@ -552,7 +598,7 @@ h2 {
 }
 
 .project-grid a::after {
-  content: "open ↗";
+  content: "open ->";
   color: var(--cyan);
   font-size: 0.72rem;
   font-weight: 950;
@@ -792,7 +838,7 @@ h2 {
 @media (max-width: 920px) {
   .scene-hero {
     min-height: auto;
-    padding-top: 7rem;
+    padding-top: 8.1rem;
   }
 
   .site-nav {
@@ -819,8 +865,12 @@ h2 {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --android-banner-offset: 2.6rem;
+  }
+
   .scene-hero {
-    padding: 10.8rem 0.8rem 4.25rem;
+    padding: 13.4rem 0.8rem 4.25rem;
   }
 
   .scene-hero::before {
@@ -866,6 +916,10 @@ h2 {
   .terminal-copy,
   .terminal-links a {
     font-size: 0.95rem;
+  }
+
+  .terminal-links {
+    grid-template-columns: 1fr;
   }
 
   .signal-bar {
